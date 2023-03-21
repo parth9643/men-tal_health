@@ -5,7 +5,7 @@ import Signup from "./components/SignUp"
 import {Routes, Route, Link} from "react-router-dom"
 
  import Login from "./components/Login"
-
+import Help from "./components/Help"
 const App = () => {
   return (
     <div className='app'>
@@ -16,6 +16,7 @@ const App = () => {
 <Route exact path='/' element={<Navbar/>}></Route>
   <Route exact path='/signup' element={<Signup/>}></Route>
   <Route exact path='/Login' element={<Login/>}></Route>
+  <Route exact path='/Help' element={<Help/>}></Route>
 </Routes>
 
     </div>
