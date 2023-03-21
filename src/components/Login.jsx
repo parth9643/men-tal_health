@@ -52,9 +52,6 @@ return;
 
 
 function handleClick(){
-
-console.log("Handle is Clicked")
-
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
