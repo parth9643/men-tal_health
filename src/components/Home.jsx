@@ -8,7 +8,7 @@ const Home = () => {
         <div className="home  ">
           <div className="content my-24  hom ">
             <h1 className='font-semibold hom1'>You're not alone. <br /> We're here for you.</h1>
-            <p className='mx-12 hom2'> Our platform encourages open conversations about mental health, without judgment or shame. Share your experiences and help others do the same.
+            <p className=' hom2'> Our platform encourages open conversations about mental health, without judgment or shame. Share your experiences and help others do the same.
                      </p>
                      <div className='flex justify-evenly hom3 '>
 
