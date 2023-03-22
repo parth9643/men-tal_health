@@ -2,17 +2,9 @@
 .app{
   /* height: 100vh; */
   display: flex;
+    background-color: rgb(30,30,30);
+
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-}
-.footer{
-  position: absolute; /* set the position of the footer to absolute */
-  bottom: 0; /* set the bottom position of the footer to 0 */
-  width: 100%; /* set the width of the footer to 100% of its container */
-  height: 50px; /* set the height of the footer to a fixed value */
-  background-color: #f5f5f5; /* add a background color to the footer */
-  display: flex; /* set the display of the footer to flex */
-  justify-content: center; /* center the contents of the footer horizontally */
-  align-items: center;
 }

@@ -85,7 +85,7 @@ signInWithPopup(auth,provider).then((result)=>{
 
 
   return (
-    <div className='sup_container cursor-pointer'>
+    <div className='sup_container cursor-pointer m-52'>
         
 <div className='first_container'>
 <h1 className='text-blue-900 text-4xl font-bold '  >Login</h1>
