@@ -7,7 +7,8 @@ import {Routes, Route, Link} from "react-router-dom"
  import Login from "./components/Login"
 import Home from './components/Home'
 import Affooter from './components/Affooter'
-// import Footer from './components/Footer'
+ import Courosel from './components/Courosel'
+
 
 const App = () => {
   return (
@@ -30,6 +31,10 @@ const App = () => {
   <Route exact path='/signup' element={<Signup/>}></Route>
   <Route exact path='/Login' element={<Login/>}></Route>
 </Routes>
+<div className='mx-44'>
+
+<Courosel />
+</div>
 <Footer/>
 <Affooter/>
 
