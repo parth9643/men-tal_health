@@ -3,12 +3,15 @@ import "./New.css";
 
 const CommunityPage = () => {
   const [posts, setPosts] = useState([]);
-  const [newPost, setNewPost] = useState({});
+  const [newPostTitle, setNewPostTitle] = useState("");
+  const [newPostContent, setNewPostContent] = useState("");
 
   const handlePostSubmit = (event) => {
     event.preventDefault();
+    const newPost = {title: newPostTitle, content: newPostContent};
     setPosts([...posts, newPost]);
-    setNewPost("");
+    setNewPostTitle("");
+    setNewPostContent("");
   };
 
   return (
@@ -21,17 +24,23 @@ const CommunityPage = () => {
         <div className="box">
           <h2 className="box-title">Post Something</h2>
           <form onSubmit={handlePostSubmit}>
-            
-
             <label>
               <input
                 type="text"
                 className="post-input"
-                placeholder="Write something here"
-                value={newPost}
-                onChange={(event) => setNewPost(event.target.value)}
+                placeholder="Post Title"
+                value={newPostTitle}
+                onChange={(event) => setNewPostTitle(event.target.value)}
               />
-              </label>
+            </label>
+            <label>
+              <textarea
+                className="post-input"
+                placeholder="Post Content"
+                value={newPostContent}
+                onChange={(event) => setNewPostContent(event.target.value)}
+              />
+            </label>
             <button type="submit" className="post-button">Post</button>
           </form>
         </div>
@@ -39,7 +48,10 @@ const CommunityPage = () => {
           <h2 className="box-title">Recent Posts</h2>
           <div className="post-list">
             {posts.map((post, index) => (
-              <div key={index} className="post-item">{post}</div>
+              <div key={index} className="post-item">
+                <h3>{post.title}</h3>
+                <p>{post.content}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -49,4 +61,3 @@ const CommunityPage = () => {
 };
 
 export default CommunityPage;
-
