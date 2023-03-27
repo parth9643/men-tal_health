@@ -6,12 +6,15 @@
 }
 
 .help_container{
-    position: absolute;
-    top: 100px;
+    color: black;
     height: max-content;
     width: 65%;
-    /* border: 2px solid red; */
     padding: 20px;
+    column-gap: 10px;
+}
+
+.common_input{
+    color: black;
 }
 
 .line{
@@ -22,7 +25,9 @@
 
 .f_helpcon{
     width: 70%;
-    /* border: 1px solid black; */
+    background-color: #f2f8ff;
+    padding: 20px;
+    border-radius: 20px;
 }
 .half_ips{
     margin-top: 20px;
@@ -36,8 +41,8 @@
 }
 .s_helpcon{
     width: 30%;
-    /* border: 1px solid blue; */
 }
+
 .help_ip{
     border: 1px solid black;
     border-radius: 5px;
@@ -63,8 +68,8 @@ width: 95%;
     width: 100%;
     margin: 4px auto;
     height: 30%;
-    /* border-radius: 10px; */
     background-size: cover;
+    border-radius: 20px;
 }
 .s_blogs{
     background: #EBF0F5;
@@ -72,6 +77,11 @@ width: 95%;
     width: 100%;
     border: 1px solid black;
     height: 40%;
+    color: #B8621B;
+    font-weight: bold;
+    row-gap: 20px;
+    text-align: left;
+    overflow: scroll;
 }
 .help_btn{
     background-color: #007bff;
@@ -87,15 +97,15 @@ border-radius: 10px;
 .help_container{
     flex-direction: column;
     row-gap: 20px;
+    
 }
 .s_helpcon{
     width: 80%;
     height: 600px;
+    row-gap: 10px;
 }
 .f_helpcon{
     width: 80%;
 }
-/* .s_images{
-    width: ;
-} */
+
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Signup.css"
-import sideimg from "../assets/signupimage.png"
+import sideimg from "../assets/signinreq.jpg"
 
 import { getAuth , signInWithEmailAndPassword , GoogleAuthProvider , signInWithPopup, FacebookAuthProvider } from 'firebase/auth'
 import Signup from './SignUp'
@@ -15,7 +15,6 @@ import {useState} from "react"
 signed_checkbox:false
     })
 
-    
     const [err,changeErr] = useState("");
 
 function submitLogin(){
@@ -52,6 +51,9 @@ return;
 
 
 function handleClick(){
+
+console.log("Handle is Clicked")
+
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
@@ -88,7 +90,7 @@ signInWithPopup(auth,provider).then((result)=>{
 <div className='first_container'>
 <h1 className='text-blue-900 text-4xl font-bold '  >Login</h1>
 
-<p className='text-lg text-red-400 font-bold'>_____ Login with</p>
+{/* <p className='text-lg text-red-400 font-bold'>_____ Login with</p> */}
 <div className='btns'>
 <button className='signup_btn' onClick={handleClick}><i className="fa-brands fa-google"></i> <p>Login with Google</p></button>
 <button className='signup_btn'  onClick={handleFbClick}> <i className="fa-brands fa-facebook"></i> <p>Login with Facebook</p> </button>
@@ -101,7 +103,7 @@ signInWithPopup(auth,provider).then((result)=>{
         </div>
        
         <div className='inputs'>
-    <input type={'text'}  name="email"  onChange={(event)=>{
+    <input type={'text'}  name="email" className='login_input'  onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,email: event.target.value}
         })
@@ -109,7 +111,7 @@ signInWithPopup(auth,provider).then((result)=>{
     </div>
     </div>
     <label htmlFor='pwd'>Password</label>
-    <input type={'text'} name='pwd' className='ips' onChange={(event)=>{
+    <input type={'text'} name='pwd' className='login_input' onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,password: event.target.value}
         })

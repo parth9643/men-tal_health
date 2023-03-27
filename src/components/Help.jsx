@@ -2,8 +2,8 @@ import React from 'react'
 import "../components/Help.css"
 import Navbar from './Navbar'
 
-import Help_img from "../assets/help.webp"
-import Helpful from "../assets/hopeful.png"
+import Help_img from "../assets/help1.jpg"
+import Helpful from "../assets/help2.jpg"
  const Help = () => {
   return (
     <>
@@ -37,28 +37,28 @@ import Helpful from "../assets/hopeful.png"
 <form className='half_ips flex flex-wrap'>
     <label htmlFor='f_name'  className='width_half'>
         <h1 className='text-xl font-normal'>First Name</h1>
-        <div><input name='f_name' className='help_ip'></input></div>
+        <div><input name='f_name' className='help_ip common_input'></input></div>
     </label>
 
     <label htmlFor='l_name' className='width_half'>
         <h1 className='text-xl font-normal'>Last Name</h1>
-        <div><input name='l_name' className='help_ip'></input></div>
+        <div><input name='l_name' className='help_ip   common_input'></input></div>
     </label>
 
     <label htmlFor='email_add' className='width_half'>
         <h1 className='text-xl font-normal'>Email Address</h1>
-        <div><input name='email_add' className='help_ip'></input></div>
+        <div><input name='email_add' className='help_ip  common_input'></input></div>
     </label>
 
     <label htmlFor='pn_number' className='width_half'>
         <h1 className='text-xl font-normal'>Phone Number</h1>
-        <div><input name='pn_number' className='help_ip'></input></div>
+        <div><input name='pn_number' className='help_ip  common_input'></input></div>
     </label>
 
     <label htmlFor='issues' className='please'>
         <h1 className='text-xl font-normal'>Please tell the issues your are facing: </h1>
         <div>  
-  <select name="issues" id="cars" className='full_help_ip mt-2'>
+  <select name="issues" id="cars" className='full_help_ip mt-2  common_input'>
     <option value="Depressed">Depressed</option>
     <option value="Burnt Out">Burn Out</option>
     <option value="Pressure">Pressure</option>
@@ -69,7 +69,7 @@ import Helpful from "../assets/hopeful.png"
     <label htmlFor='identify' className='please'>
         <h1 className='text-xl font-normal'>How do we identify you as: </h1>
         <div>  
-  <select name="identify" id="cars" className='full_help_ip mt-2'>
+  <select name="identify" id="cars" className='full_help_ip mt-2 common_input'>
     <option value="High School Student">High School Student</option>
     <option value="College Student">College Student</option>
     <option value="Graduate">Graduate</option>
@@ -80,7 +80,7 @@ import Helpful from "../assets/hopeful.png"
 <label htmlFor='ip_textarea' className='please'>
     <h1 className='text-xl font-normal'>Please explain Your issue in short and how we may help you</h1>
     <div>
-        <textarea name='ip_textarea' rows={'10'} className='txarea' style={{border:'1px solid black',padding:'10px'}} ></textarea>
+        <textarea name='ip_textarea' rows={'10'} className='txarea  common_input' style={{border:'1px solid black',padding:'10px'}} ></textarea>
     </div>
 </label>
 
@@ -97,7 +97,30 @@ import Helpful from "../assets/hopeful.png"
 
 <div className='s_helpcon flex flex-col'>
 <img src={Help_img} className='s_images'></img>
-<div className='s_blogs'></div>
+<div className='s_blogs flex flex-col mx-auto'>
+    <div className='mx-auto'>Blogs that may help you</div>
+<li className='list-disc'><a href='https://www.amosuir.com/'>
+    Change Yourself. 
+    </a></li>
+<li className='list-disc'><a href='https://anxiouslass.com/'>
+   Social anxiety.
+    </a></li>
+
+
+
+<li className='list-disc'><a href='https://www.childabusesurvivor.net/'>
+   Abused and bullied? 
+    </a></li>
+
+<li className='list-disc'><a href='https://dsmready.com/'>
+   Defeat sigma mindfully.
+    </a></li>
+
+    <li className='list-disc'><a href='https://www.smarterandharder.com/'>
+   Smarter and Harder.
+    </a></li>
+
+</div>
 <img src={Helpful} className='s_images'></img>
 </div>
 
