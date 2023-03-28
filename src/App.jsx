@@ -10,6 +10,9 @@ import Affooter from './components/Affooter'
  import Courosel from './components/Courosel'
 
 
+import Help from "./components/Help"
+
+
 const App = () => {
   return (
     <div className='app'>
@@ -23,7 +26,10 @@ const App = () => {
 
 
 {/* <Route exact path='/*' element={<Footer/>}></Route> */}
-{/* <Route exact path='/Home' element={<Home/>}></Route> */}
+
+<Route exact path='/Help' element={<Help/>}></Route>
+
+
   
   <Route exact path='/Home' element={<Home/>}></Route>
  
