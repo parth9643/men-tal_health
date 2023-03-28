@@ -1,3 +1,4 @@
+
 import React from 'react'
 import man from '../assets/man.jpg'
 import './Home.css'
@@ -25,4 +26,5 @@ const Home = () => {
 }
 
 export default Home
+
 

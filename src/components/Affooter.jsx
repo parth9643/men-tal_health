@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const affooter = () => {
@@ -9,3 +10,4 @@ const affooter = () => {
 }
 
 export default affooter
+

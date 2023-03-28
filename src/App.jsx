@@ -8,7 +8,10 @@ import {Routes, Route, Link} from "react-router-dom"
 import Home from './components/Home'
 import Affooter from './components/Affooter'
  import Courosel from './components/Courosel'
+
+
 import Help from "./components/Help"
+
 
 const App = () => {
   return (
@@ -23,7 +26,10 @@ const App = () => {
 
 
 {/* <Route exact path='/*' element={<Footer/>}></Route> */}
+
 <Route exact path='/Help' element={<Help/>}></Route>
+
+
   
   <Route exact path='/Home' element={<Home/>}></Route>
  
