@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Signup.css"
-import sideimg from "../assets/signupimage.png"
+import sideimg from "../assets/signupreq.jpg"
 
 import {useState} from "react"
 import {Link} from "react-router-dom"
@@ -122,41 +122,47 @@ form.reset();
 <div className='first_container'>
 <h1 className='text-blue-900 text-4xl font-bold '  >Sign Up</h1>
 
-<p className='text-lg text-red-400 font-bold'>_____ Sign Up with</p>
-<div className='btns'>
+<div className='btns flex-wrap'>
 <button className='signup_btn' onClick={handleClick}><i className="fa-brands fa-google"></i> <p>Sign Up with Google</p></button>
 <button className='signup_btn' onClick={handleFbClick}> <i className="fa-brands fa-facebook"></i> <p>Sign Up with Facebook</p> </button>
 </div>
 
 <form className='signup_form'>
     <div className='form_first'>
-        <div className='labels'>
-        <label htmlFor='display_name'  >Name</label>
-        <label htmlFor='email'>Email</label>
-        </div>
-       
-        <div className='inputs'>
-    <input type={'text'}  name="display_name"  onChange={(event)=>{
+
+<div className='flex gap-8 flex-wrap'>
+<div className='relative mt-4'>
+        <label htmlFor='display_name' className='absolute -top-8'  >Name</label>
+        <input type={'text'}  name="display_name"  className='p-2' onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,name : event.target.value}
         })
     }} ></input>
-    <input type={'text'}  name="email" onChange={(event)=>{
+        </div>
+<div className='relative mt-4'>
+        <label htmlFor='email' className='absolute -top-8'  >Email</label>
+        <input type={'text'}  name="email"  className='p-2' onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,email : event.target.value}
         })
     }} ></input>
+        </div>
+
+
+</div>
+
+
     </div>
-    </div>
+    
     <label htmlFor='pwd'>Password</label>
-    <input type={'text'} name='pwd' className='ips' onChange={(event)=>{
+    <input type={'text'} name='pwd' className='p-2 w-max' onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,password : event.target.value}
         })
     }} ></input>
     
 
-<div className='flex gap-4 max-w-xs'>
+<div className='flex gap-4 max-w-xs mt-1'>
     <input type={'checkbox'} className="form_checkbox" onChange={(event)=>{
         changeData((prev)=>{
             return {...prev,privacy_checkbox : event.target.checked}

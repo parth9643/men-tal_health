@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {FaBars,FaTimes} from "react-icons/fa"
+import "./Navbar.css"
 // import {Link} from "react-scroll"
 import {Link} from "react-router-dom"
 const Navbar = ()=> {
@@ -8,29 +9,31 @@ const Navbar = ()=> {
      const links=[
         {
             id: 1,
-            link:"Home"
+            link:"/Home"
             
 
         },
         {
             id:2,
-            link:"Posts",
+            link:"/Posts",
         },
         {
             id:3,
-            link:"Help",
+            link:"/Help",
         },
         {
             id:4,
-            link:"signup",
+            link:"/signup",
         },
         {
             id:5,
-            link:"Login"
+            link:"/Login"
         },
      ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+
+    <div className="flex justify-between items-center w-full h-20 px-4 bg-gray-800 text-gray-400 fixed opacity-70 nav">
+
        
        <div>
         <h1 className="text-5xl font-signature ml-2">Abhishek</h1>
@@ -39,7 +42,10 @@ const Navbar = ()=> {
         {links.map(({ id, link})=>(
 
 <Link  to={link}>
-             <li key={id} className="px-4 cursor-pointer capitalise font-medium text-gray-500 hover:scale-105 duration-200"> {link}</li>  
+
+
+             <li key={id} className="px-4 cursor-pointer capitalise font-medium text-white hover:scale-105 duration-200"> {link}</li>  
+\
              </Link>
          ))} 
        </ul>
@@ -48,11 +54,11 @@ const Navbar = ()=> {
        </div>
        {nav &&(
 
-       <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full  bg-gradient-to-b from-black to-gray-800 text-gray-500">
+       <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
        {links.map(({ id, link})=>(
 
-  <Link to={link}> <li key={id} className="px-4 cursor-pointer capitalize py-6  text-4xl"> 
-                {link}
+ <Link to={link}> <li key={id} className="px-4 cursor-pointer capitalize py-6  text-4xl"> 
+                {link.slice(1)}
               </li>  </Link>
 
 ))} 
